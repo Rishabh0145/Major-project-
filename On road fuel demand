@@ -4,149 +4,182 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fuel Delivery On Demand</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container">
-            <a class="navbar-brand" href="#">Fuel Delivery</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="images/logo.png" alt="Logo" width="30" height="30">
+                FuelOnDemand
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Services</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Book Fuel</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#how-it-works">How It Works</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
                 </ul>
             </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <header class="hero">
+    <section class="hero bg-primary text-white text-center py-5">
+        <div class="container">
+            <h1 class="display-4">Fuel Delivery, Right at Your Doorstep</h1>
+            <p class="lead">Get your fuel delivered at the click of a button.</p>
+            <a href="#order-form" class="btn btn-light btn-lg">Order Now</a>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section id="how-it-works" class="py-5">
+        <div class="container">
+            <h2 class="text-center">How It Works</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <h4>Step 1: Request Fuel</h4>
+                    <p>Simply fill out the form to request fuel delivery to your location.</p>
+                </div>
+                <div class="col-md-4">
+                    <h4>Step 2: Get Delivered</h4>
+                    <p>Our delivery team will arrive at your location promptly.</p>
+                </div>
+                <div class="col-md-4">
+                    <h4>Step 3: Pay Online</h4>
+                    <p>Make secure payments via our online payment system.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Order Form Section -->
+    <section id="order-form" class="bg-light py-5">
+        <div class="container">
+            <h2 class="text-center">Order Fuel</h2>
+            <form>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Your Name</label>
+                            <input type="text" class="form-control" id="name" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="location" class="form-label">Delivery Location</label>
+                            <input type="text" class="form-control" id="location" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="fuel-type" class="form-label">Fuel Type</label>
+                            <select class="form-select" id="fuel-type" required>
+                                <option value="petrol">Petrol</option>
+                                <option value="diesel">Diesel</option>
+                                <option value="gas">Gas</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="mb-3">
+                            <label for="quantity" class="form-label">Quantity (in liters)</label>
+                            <input type="number" class="form-control" id="quantity" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="payment-method" class="form-label">Payment Method</label>
+                            <select class="form-select" id="payment-method" required>
+                                <option value="credit-card">Credit Card</option>
+                                <option value="paypal">PayPal</option>
+                                <option value="cash">Cash</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit Order</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer id="contact" class="bg-dark text-white py-4">
         <div class="container text-center">
-            <h1>Fuel Delivery At Your Doorstep</h1>
-            <p>Order fuel anytime, anywhere with our on-demand service.</p>
-            <a href="#book-fuel" class="btn btn-primary">Book Now</a>
+            <p>&copy; 2025 FuelOnDemand. All rights reserved.</p>
+            <p>Contact Us: support@fuelondemand.com</p>
         </div>
-    </header>
-
-    <!-- About Section -->
-    <section class="container my-5">
-        <div class="row">
-            <div class="col-md-6">
-                <h2>What is Fuel Delivery on Demand?</h2>
-                <p>Fuel Delivery on Demand is a service where fuel is delivered to your location whenever you need it. No need to visit fuel stations—just place an order, and we will bring the fuel to you.</p>
-            </div>
-            <div class="col-md-6">
-                <img src="images/fuel-delivery.jpg" class="img-fluid" alt="Fuel Delivery">
-            </div>
-        </div>
-    </section>
-
-    <!-- Services Section -->
-    <section class="container my-5">
-        <h2 class="text-center">Our Services</h2>
-        <div class="row text-center">
-            <div class="col-md-4">
-                <img src="images/car-fuel.jpg" class="img-fluid" alt="Car Fuel">
-                <h4>Car Fuel Delivery</h4>
-                <p>Get petrol or diesel delivered to your car wherever you are.</p>
-            </div>
-            <div class="col-md-4">
-                <img src="images/generator-fuel.jpg" class="img-fluid" alt="Generator Fuel">
-                <h4>Generator Fuel Supply</h4>
-                <p>Order diesel for your office or home generators.</p>
-            </div>
-            <div class="col-md-4">
-                <img src="images/fleet-fuel.jpg" class="img-fluid" alt="Fleet Fuel">
-                <h4>Fleet Fuel Management</h4>
-                <p>Refuel your entire fleet with a single request.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Book Fuel Section -->
-    <section class="container my-5" id="book-fuel">
-        <h2 class="text-center">Book Your Fuel</h2>
-        <div class="row justify-content-center">
-            <div class="col-md-6">
-                <form>
-                    <div class="mb-3">
-                        <label class="form-label">Name</label>
-                        <input type="text" class="form-control" placeholder="Enter your name">
-                    </div>
-                    <div class="mb-3">
-                        <label class="form-label">Phone Number</label>
-                        <input type="text" class="form-control" placeholder="Enter your phone number">
-                    </div>
-                    <div class="mb-3">
-                        <label class="form-label">Fuel Type</label>
-                        <select class="form-control">
-                            <option>Petrol</option>
-                            <option>Diesel</option>
-                            <option>Gasoline</option>
-                        </select>
-                    </div>
-                    <div class="mb-3">
-                        <label class="form-label">Quantity (Liters)</label>
-                        <input type="number" class="form-control" placeholder="Enter quantity">
-                    </div>
-                    <div class="mb-3">
-                        <label class="form-label">Delivery Location</label>
-                        <input type="text" class="form-control" placeholder="Enter your address">
-                    </div>
-                    <button type="submit" class="btn btn-primary">Submit Request</button>
-                </form>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section class="container my-5">
-        <h2 class="text-center">Contact Us</h2>
-        <p class="text-center">Have questions? Reach out to us.</p>
-        <p class="text-center"><strong>Email:</strong> support@fueldelivery.com | <strong>Phone:</strong> +91 123-456-7890</p>
-    </section>
-
-    <!-- Footer -->
-    <footer class="bg-dark text-white text-center py-3">
-        <p>© 2025 Fuel Delivery on Demand | Designed by Sumit</p>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
+
 /* General Styles */
 body {
     font-family: Arial, sans-serif;
 }
 
+/* Navbar */
+.navbar {
+    margin-bottom: 20px;
+}
+
 /* Hero Section */
 .hero {
-    background: url('images/fuel-delivery-bg.jpg') no-repeat center center/cover;
-    height: 50vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    background: #007bff;
     color: white;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    padding: 80px 0;
 }
 
-/* Services */
-.services img {
-    width: 100px;
-    margin-bottom: 10px;
+.hero h1 {
+    font-size: 3rem;
+    font-weight: bold;
 }
 
-/* Book Fuel Form */
-form {
-    background: #f8f9fa;
-    padding: 20px;
-    border-radius: 5px;
+.hero p {
+    font-size: 1.25rem;
+}
+
+/* How It Works Section */
+#how-it-works h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+}
+
+#how-it-works .row .col-md-4 {
+    text-align: center;
+}
+
+#how-it-works h4 {
+    font-size: 1.5rem;
+}
+
+/* Order Form */
+#order-form {
+    background-color: #f7f7f7;
+}
+
+#order-form h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+}
+
+form .form-control,
+form .form-select {
+    margin-bottom: 15px;
+}
+
+/* Footer */
+footer {
+    background-color: #343a40;
+    color: white;
 }
